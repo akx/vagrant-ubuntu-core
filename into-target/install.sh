@@ -13,8 +13,8 @@ auto eth0
 iface eth0 inet dhcp
 EOF
 
-echo x$RANDOM > /etc/hostname
-echo "127.0.0.1" $(cat /etc/hostname) >> /etc/hosts
+echo ucore > /etc/hostname
+echo "127.0.0.1 ucore" >> /etc/hosts
 /usr/sbin/useradd -m vagrant -G sudo
 echo vagrant:vagrant | chpasswd
 mkdir -p /home/vagrant/.ssh
